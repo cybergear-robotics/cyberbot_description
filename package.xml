@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+    <name>cyberbot_description</name>
+    <version>0.1.0</version>
+    <description>CyberBot Description Package</description>
+    <maintainer email="johannes.fischer@fischejo.de">Johannes Fischer</maintainer>
+    <license>MIT</license>
+    <buildtool_depend>ament_cmake</buildtool_depend>
+    <exec_depend>joint_state_publisher</exec_depend>
+    <exec_depend>ament_index_python</exec_depend>
+    <exec_depend>launch</exec_depend>
+    <exec_depend>launch_ros</exec_depend>
+    <exec_depend>robot_state_publisher</exec_depend>
+    <exec_depend>sdformat_urdf</exec_depend>
+    <exec_depend>tf2_ros</exec_depend>
+    <exec_depend>rclpy</exec_depend>
+    <exec_depend>geometry_msgs</exec_depend>
+    <exec_depend>sensor_msgs</exec_depend>
+    <exec_depend>nav_msgs</exec_depend>
+    <exec_depend>python3-numpy</exec_depend>
+    <depend>urdf</depend>
+    <test_depend>ament_cmake_pytest</test_depend>
+    <test_depend>python3-pytest</test_depend>
+    <test_depend>python3-yaml</test_depend>
+    <export>
+        <build_type>ament_cmake</build_type>
+    </export>
+</package>
