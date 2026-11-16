@@ -1,4 +1,9 @@
-# cyberbot_description
+# CyberBot ROS2 Description Package
+
+[![ROS 2 tests](https://github.com/cybergear-robotics/cyberbot_description/actions/workflows/ros2-tests.yml/badge.svg)](https://github.com/cybergear-robotics/cyberbot_description/actions/workflows/ros2-tests.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/cybergear-robotics/ros2-cyberbot/activity)
+[![ROS_2](https://img.shields.io/badge/ROS_2-Jazzy-orange.svg)](https://docs.ros.org/en/jazzy/index.html)
 
 ROS 2 description package for Cyberbot. It contains the robot's SDF model and
 mesh assets, ROS launch files and description helper nodes.
