@@ -13,19 +13,30 @@ concurrency:
 jobs:
   export:
     runs-on: ubuntu-24.04
+    container:
+      image: ubuntu:noble
     steps:
+      - name: Set up ROS 2 Jazzy
+        uses: ros-tooling/setup-ros@0.7.19
+        with:
+          required-ros-distributions: jazzy
+
       - name: Check out assets repository
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install onshape-to-robot
-        run: python -m pip install --upgrade onshape-to-robot
+      - name: Install workflow tools and Onshape exporter
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            gh \
+            python3-catkin-pkg \
+            python3-pytest \
+            python3-venv \
+            zip
+          python3 -m venv "$RUNNER_TEMP/onshape-venv"
+          "$RUNNER_TEMP/onshape-venv/bin/python" -m pip install --upgrade pip onshape-to-robot
 
       - name: Resolve current Onshape workspace/version
         id: source
@@ -33,14 +44,15 @@ jobs:
           ONSHAPE_API: https://cad.onshape.com
           ONSHAPE_ACCESS_KEY: ${{ secrets.ONSHAPE_ACCESS_KEY }}
           ONSHAPE_SECRET_KEY: ${{ secrets.ONSHAPE_SECRET_KEY }}
-        run: python scripts/onshape_source.py
+        run: python3 scripts/onshape_source.py
 
       - name: Export model from Onshape
         env:
           ONSHAPE_API: https://cad.onshape.com
           ONSHAPE_ACCESS_KEY: ${{ secrets.ONSHAPE_ACCESS_KEY }}
           ONSHAPE_SECRET_KEY: ${{ secrets.ONSHAPE_SECRET_KEY }}
-        run: onshape-to-robot sdf
+        run: |
+          "$RUNNER_TEMP/onshape-venv/bin/onshape-to-robot" sdf
 
       - name: Save Assembly thumbnail for Onshape version
         if: steps.source.outputs.version_id != ''
@@ -53,31 +65,28 @@ jobs:
           ELEMENT_ID: ${{ steps.source.outputs.element_id }}
           VERSION_NAME: ${{ steps.source.outputs.source_name }}
         run: |
-          python scripts/fetch_onshape_thumbnail.py \
+          python3 scripts/fetch_onshape_thumbnail.py \
             --document-id "$DOCUMENT_ID" \
             --version-id "$VERSION_ID" \
             --element-id "$ELEMENT_ID" \
             --version-name "$VERSION_NAME"
 
-      - name: Set up ROS 2 Jazzy
-        uses: ros-tooling/setup-ros@v0.7
-        with:
-          required-ros-distributions: jazzy
-
       - name: Install ROS package dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y python3-colcon-common-extensions
-          sudo rosdep init || true
           rosdep update
-          rosdep install --from-paths . --ignore-src --rosdistro jazzy --default-yes --recursive \
-            --dependency-types build,buildtool,build_export,buildtool_export,exec,test
+          rosdep install --from-paths . --ignore-src --rosdistro jazzy --default-yes
 
       - name: Build and test exported description
         shell: bash
         run: |
           source /opt/ros/jazzy/setup.bash
-          colcon build --packages-select cyberbot_description
+          echo "PATH=$PATH"
+          echo "Default python3: $(command -v python3)"
+          /usr/bin/python3 -c "import catkin_pkg, pytest; print('System Python ROS imports OK')"
+          rm -rf build install log
+          colcon build --packages-select cyberbot_description --cmake-args \
+            -DPython3_EXECUTABLE=/usr/bin/python3 \
+            -DPYTHON_EXECUTABLE=/usr/bin/python3
           source install/local_setup.bash
           colcon test --packages-select cyberbot_description
           colcon test-result --verbose

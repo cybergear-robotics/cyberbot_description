@@ -7,14 +7,19 @@ on:
 jobs:
   test:
     runs-on: ubuntu-24.04
+    container:
+      image: ubuntu:noble
     steps:
       - name: Set up ROS 2 Jazzy
-        uses: ros-tooling/setup-ros@v0.7
+        uses: ros-tooling/setup-ros@0.7.19
         with:
           required-ros-distributions: jazzy
 
       - name: Build and test description package
-        uses: ros-tooling/action-ros-ci@v0.3
+        uses: ros-tooling/action-ros-ci@0.4.8
         with:
           package-name: cyberbot_description
           target-ros2-distro: jazzy
+          extra-cmake-args: >-
+            -DPython3_EXECUTABLE=/usr/bin/python3
+            -DPYTHON_EXECUTABLE=/usr/bin/python3
