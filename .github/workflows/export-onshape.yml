@@ -85,8 +85,7 @@ jobs:
           /usr/bin/python3 -c "import catkin_pkg, pytest; print('System Python ROS imports OK')"
           rm -rf build install log
           colcon build --packages-select cyberbot_description --cmake-args \
-            -DPython3_EXECUTABLE=/usr/bin/python3 \
-            -DPYTHON_EXECUTABLE=/usr/bin/python3
+            -DPython3_EXECUTABLE=/usr/bin/python3
           source install/local_setup.bash
           colcon test --packages-select cyberbot_description
           colcon test-result --verbose

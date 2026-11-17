@@ -56,6 +56,7 @@ def body_tilt(imu_quaternion, imu_frame_rpy):
 
 def load_wheel_vertices(sdf_path, wheel_frames):
     """Read visual geometry only; linkage transforms still come from the MCU/RSP."""
+    sdf_path = Path(sdf_path)
     model = ET.parse(sdf_path).getroot().find('model')
     wheels = []
     for frame in wheel_frames:
@@ -70,8 +71,13 @@ def load_wheel_vertices(sdf_path, wheel_frames):
             uri = mesh.findtext('uri', '')
             if not uri.startswith(('package://', 'model://')):
                 raise ValueError(f'unsupported wheel mesh URI: {uri}')
-            package, relative = uri.split('://', 1)[1].split('/', 1)
-            mesh_path = Path(get_package_share_directory(package)) / relative
+            scheme, resource = uri.split('://', 1)
+            package, relative = resource.split('/', 1)
+            if scheme == 'model' and package == model.get('name'):
+                # Native onshape-to-robot SDF URI, relative to this model directory.
+                mesh_path = sdf_path.parent / relative
+            else:
+                mesh_path = Path(get_package_share_directory(package)) / relative
             data = mesh_path.read_bytes()
             if len(data) < 84:
                 raise ValueError(f'invalid binary STL: {mesh_path}')

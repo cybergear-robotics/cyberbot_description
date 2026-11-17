@@ -14,13 +14,20 @@
             "friction": 0.5
         },
         "wheel_left": {
-            "type": "revolute"
+            "type": "revolute",
+            "limits": [-1e16, 1e16],
+            "max_effort": 4.0,
+            "max_velocity": 30.0
         },
         "wheel_right": {
-            "type": "revolute"
+            "type": "revolute",
+            "limits": [-1e16, 1e16],
+            "max_effort": 4.0,
+            "max_velocity": 30.0
         }
     },
     "post_import_commands": [
+        "sed -i 's#model://cyberbot/#model://cyberbot_description/sdf/#g' sdf/robot.sdf",
         "sed -i '/<link name=\"base\">/r sdf/sensors.xml' sdf/robot.sdf"
     ]
 }

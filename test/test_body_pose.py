@@ -74,14 +74,17 @@ def node(monkeypatch):
     # Unit tests never join the robot's ROS domain or run an executor.
     monkeypatch.setenv('ROS_DOMAIN_ID', '191')
     rclpy.init(args=[])
-    instance = MODULE['BodyPose']()
-    sent = []
-    instance.broadcaster = SimpleNamespace(sendTransform=sent.append)
+    instance = None
     try:
+        instance = MODULE['BodyPose']()
+        sent = []
+        instance.broadcaster = SimpleNamespace(sendTransform=sent.append)
         yield instance, sent
     finally:
-        instance.destroy_node()
-        rclpy.shutdown()
+        if instance is not None:
+            instance.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 def imu(stamp, angles=(0, 0, 0)):
