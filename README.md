@@ -1,4 +1,4 @@
-# CyberBot ROS2 Description Package
+# CyberBot ROS 2 Description Package
 
 [![ROS 2 tests](https://github.com/cybergear-robotics/cyberbot_description/actions/workflows/ros2-tests.yml/badge.svg)](https://github.com/cybergear-robotics/cyberbot_description/actions/workflows/ros2-tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
