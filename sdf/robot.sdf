@@ -1,0 +1,1447 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape document_id: 7e9c507bcee485da64990cd9 / version_id: 7726fe7ada26015291d6d4db -->
+<sdf version="1.7">
+  <model name="cyberbot">
+    <!-- Link base -->
+    <link name="base">
+            <sensor name="imu_sensor" type="imu">
+                <always_on>1</always_on>
+                <update_rate>225</update_rate>
+                <visualize>true</visualize>
+                <topic>imu</topic>
+            </sensor>
+      <inertial>
+        <pose>0.00170388 -0.00342466 0.102967 0 0 0</pose>
+        <mass>1.76333</mass>
+        <inertia>
+          <ixx>0.0141043</ixx>
+          <ixy>-1.25579e-05</ixy>
+          <ixz>-0.000139827</ixz>
+          <iyy>0.00813179</iyy>
+          <iyz>-6.75019e-06</iyz>
+          <izz>0.0181699</izz>
+        </inertia>
+      </inertial>
+      <pose>0 0 0 0 -0 0</pose>
+      <!-- Part cybergear -->
+      <visual name="cybergear_visual_mesh_1">
+        <pose relative_to="base">-0.05 0.0745 0.108809 1.5708 -0.680678 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.207843 0.207843 0.207843 1</ambient>
+          <diffuse>0.207843 0.207843 0.207843 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="cybergear_collision_mesh_2">
+        <pose relative_to="base">-0.05 0.0745 0.108809 1.5708 -0.680678 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part panel -->
+      <visual name="panel_visual_mesh_1">
+        <pose relative_to="base">0 -0.0735 0.108809 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/panel.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="panel_collision_mesh_2">
+        <pose relative_to="base">0 -0.0735 0.108809 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/panel.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part attachment -->
+      <visual name="attachment_visual_mesh_1">
+        <pose relative_to="base">-0 -0.0535 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="attachment_collision_mesh_2">
+        <pose relative_to="base">-0 -0.0535 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part pc_holder -->
+      <visual name="pc_holder_visual_mesh_1">
+        <pose relative_to="base">0.06 -0.0035 0.0940762 0 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/pc_holder.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="pc_holder_collision_mesh_2">
+        <pose relative_to="base">0.06 -0.0035 0.0940762 0 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/pc_holder.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part attachment_2 -->
+      <visual name="attachment_2_visual_mesh_1">
+        <pose relative_to="base">-0 0.0365 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="attachment_2_collision_mesh_2">
+        <pose relative_to="base">-0 0.0365 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part pdb_holder -->
+      <visual name="pdb_holder_visual_mesh_1">
+        <pose relative_to="base">-0.05 -0.0035 0.0940762 0 -0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/pdb_holder.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="pdb_holder_collision_mesh_2">
+        <pose relative_to="base">-0.05 -0.0035 0.0940762 0 -0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/pdb_holder.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part carbon_pipe -->
+      <visual name="carbon_pipe_visual_mesh_1">
+        <pose relative_to="base">-0.0718163 0.0765 0.160095 -1.5708 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.262745 0.282353 0.301961 1</ambient>
+          <diffuse>0.262745 0.282353 0.301961 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="carbon_pipe_collision_mesh_2">
+        <pose relative_to="base">-0.0718163 0.0765 0.160095 -1.5708 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part carbon_pipe_2 -->
+      <visual name="carbon_pipe_2_visual_mesh_1">
+        <pose relative_to="base">0.1 0.0765 0.0855762 -1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.262745 0.282353 0.301961 1</ambient>
+          <diffuse>0.262745 0.282353 0.301961 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="carbon_pipe_2_collision_mesh_2">
+        <pose relative_to="base">0.1 0.0765 0.0855762 -1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part attachment_3 -->
+      <visual name="attachment_3_visual_mesh_1">
+        <pose relative_to="base">-0.1 -0.0535 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="attachment_3_collision_mesh_2">
+        <pose relative_to="base">-0.1 -0.0535 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part attachment_4 -->
+      <visual name="attachment_4_visual_mesh_1">
+        <pose relative_to="base">0.1 -0.0535 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="attachment_4_collision_mesh_2">
+        <pose relative_to="base">0.1 -0.0535 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part carbon_pipe_3 -->
+      <visual name="carbon_pipe_3_visual_mesh_1">
+        <pose relative_to="base">-0 0.0765 0.0855762 -1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.262745 0.282353 0.301961 1</ambient>
+          <diffuse>0.262745 0.282353 0.301961 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="carbon_pipe_3_collision_mesh_2">
+        <pose relative_to="base">-0 0.0765 0.0855762 -1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part part_2 -->
+      <visual name="part_2_visual_mesh_1">
+        <pose relative_to="base">0.0872765 -0.0439658 0.144436 2.41886 -0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/part_2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.796078 0.823529 0.937255 1</ambient>
+          <diffuse>0.796078 0.823529 0.937255 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="part_2_collision_mesh_2">
+        <pose relative_to="base">0.0872765 -0.0439658 0.144436 2.41886 -0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/part_2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part cybergear_2 -->
+      <visual name="cybergear_2_visual_mesh_1">
+        <pose relative_to="base">0.05 -0.0815 0.108809 1.5708 -0.680678 -0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.207843 0.207843 0.207843 1</ambient>
+          <diffuse>0.207843 0.207843 0.207843 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="cybergear_2_collision_mesh_2">
+        <pose relative_to="base">0.05 -0.0815 0.108809 1.5708 -0.680678 -0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part carbon_pipe_4 -->
+      <visual name="carbon_pipe_4_visual_mesh_1">
+        <pose relative_to="base">0.0854708 0.0765 0.0196376 -1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.262745 0.282353 0.301961 1</ambient>
+          <diffuse>0.262745 0.282353 0.301961 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="carbon_pipe_4_collision_mesh_2">
+        <pose relative_to="base">0.0854708 0.0765 0.0196376 -1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part carbon_pipe_5 -->
+      <visual name="carbon_pipe_5_visual_mesh_1">
+        <pose relative_to="base">-0.1 0.0765 0.0855762 -1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.262745 0.282353 0.301961 1</ambient>
+          <diffuse>0.262745 0.282353 0.301961 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="carbon_pipe_5_collision_mesh_2">
+        <pose relative_to="base">-0.1 0.0765 0.0855762 -1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part button_blende -->
+      <visual name="button_blende_visual_mesh_1">
+        <pose relative_to="base">0.0971981 -0 0.155686 2.41886 -0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/button_blende.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.737255 0.937255 0.917647 1</ambient>
+          <diffuse>0.737255 0.937255 0.917647 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="button_blende_collision_mesh_2">
+        <pose relative_to="base">0.0971981 -0 0.155686 2.41886 -0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/button_blende.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part panel_2 -->
+      <visual name="panel_2_visual_mesh_1">
+        <pose relative_to="base">-0 0.0665 0.108809 1.5708 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/panel.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="panel_2_collision_mesh_2">
+        <pose relative_to="base">-0 0.0665 0.108809 1.5708 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/panel.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part attachment_5 -->
+      <visual name="attachment_5_visual_mesh_1">
+        <pose relative_to="base">-0.1 0.0365 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="attachment_5_collision_mesh_2">
+        <pose relative_to="base">-0.1 0.0365 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part cybergear_3 -->
+      <visual name="cybergear_3_visual_mesh_1">
+        <pose relative_to="base">0.05 0.0745 0.108809 1.5708 0.715585 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.207843 0.207843 0.207843 1</ambient>
+          <diffuse>0.207843 0.207843 0.207843 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="cybergear_3_collision_mesh_2">
+        <pose relative_to="base">0.05 0.0745 0.108809 1.5708 0.715585 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part imu -->
+      <visual name="imu_visual_mesh_1">
+        <pose relative_to="base">0.0499676 -0.0035185 0.0970762 -0 0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/imu.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="imu_collision_mesh_2">
+        <pose relative_to="base">0.0499676 -0.0035185 0.0970762 -0 0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/imu.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part carbon_pipe_6 -->
+      <visual name="carbon_pipe_6_visual_mesh_1">
+        <pose relative_to="base">0.0718163 0.0765 0.160095 -1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.262745 0.282353 0.301961 1</ambient>
+          <diffuse>0.262745 0.282353 0.301961 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="carbon_pipe_6_collision_mesh_2">
+        <pose relative_to="base">0.0718163 0.0765 0.160095 -1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part carbon_pipe_7 -->
+      <visual name="carbon_pipe_7_visual_mesh_1">
+        <pose relative_to="base">-0.0854708 -0.0835 0.0196376 1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.262745 0.282353 0.301961 1</ambient>
+          <diffuse>0.262745 0.282353 0.301961 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="carbon_pipe_7_collision_mesh_2">
+        <pose relative_to="base">-0.0854708 -0.0835 0.0196376 1.5708 0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/carbon_pipe.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part cybergear_4 -->
+      <visual name="cybergear_4_visual_mesh_1">
+        <pose relative_to="base">-0.05 -0.0815 0.108809 1.5708 0.715585 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.207843 0.207843 0.207843 1</ambient>
+          <diffuse>0.207843 0.207843 0.207843 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="cybergear_4_collision_mesh_2">
+        <pose relative_to="base">-0.05 -0.0815 0.108809 1.5708 0.715585 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part attachment_6 -->
+      <visual name="attachment_6_visual_mesh_1">
+        <pose relative_to="base">0.1 0.0365 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="attachment_6_collision_mesh_2">
+        <pose relative_to="base">0.1 0.0365 0.0855762 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/attachment.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part dc_power_jack_5_5_2_1_body -->
+      <visual name="dc_power_jack_5_5_2_1_body_visual_mesh_1">
+        <pose relative_to="base">0.0950815 0.045 0.153286 -0.722734 -0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/dc_power_jack_5_5_2_1_body.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="dc_power_jack_5_5_2_1_body_collision_mesh_2">
+        <pose relative_to="base">0.0950815 0.045 0.153286 -0.722734 -0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/dc_power_jack_5_5_2_1_body.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part bolt -->
+      <visual name="bolt_visual_mesh_1">
+        <pose relative_to="base">0.0971981 0.045 0.155686 -2.29353 -0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/bolt.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="bolt_collision_mesh_2">
+        <pose relative_to="base">0.0971981 0.045 0.155686 -2.29353 -0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/bolt.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Link leg_top_other -->
+    <link name="leg_top_other">
+      <inertial>
+        <pose>-0.046887 -0.0016843 -0.0253058 0 0 0</pose>
+        <mass>0.095</mass>
+        <inertia>
+          <ixx>2.59647e-05</ixx>
+          <ixy>-1.43021e-06</ixy>
+          <ixz>-1.40489e-05</ixz>
+          <iyy>0.000166476</iyy>
+          <iyz>2.25046e-06</iyz>
+          <izz>0.000164641</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="joint_left_front">0 0 0 0 -0 0</pose>
+      <!-- Part leg_top_other -->
+      <visual name="leg_top_other_visual_mesh_1">
+        <pose relative_to="leg_top_other">-0.06 -0 -0.044 -0 0 -0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_top_other.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="leg_top_other_collision_mesh_2">
+        <pose relative_to="leg_top_other">-0.06 -0 -0.044 -0 0 -0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_top_other.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Link leg_bottom_other -->
+    <link name="leg_bottom_other">
+      <inertial>
+        <pose>0.0839828 0 -0.0103274 0 0 0</pose>
+        <mass>0.085</mass>
+        <inertia>
+          <ixx>1.54332e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>4.80161e-06</ixz>
+          <iyy>0.000301804</iyy>
+          <iyz>0</iyz>
+          <izz>0.000308476</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="passive_left_front">0 0 0 0 -0 0</pose>
+      <!-- Part leg_bottom_other -->
+      <visual name="leg_bottom_other_visual_mesh_1">
+        <pose relative_to="leg_bottom_other">0.09 0 -0.022 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_bottom_other.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="leg_bottom_other_collision_mesh_2">
+        <pose relative_to="leg_bottom_other">0.09 0 -0.022 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_bottom_other.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Joint from leg_top_other to leg_bottom_other -->
+    <joint name="passive_left_front" type="revolute">
+      <pose relative_to="leg_top_other">-0.12 -0 -0.022 3.14159 0 0.33985</pose>
+      <parent>leg_top_other</parent>
+      <child>leg_bottom_other</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>6</velocity>
+          <lower>-3.141592653589793</lower>
+          <upper>3.141592653589793</upper>
+        </limit>
+        <dynamics>
+          <friction>0.5</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Joint from base to leg_top_other -->
+    <joint name="joint_left_front" type="revolute">
+      <pose relative_to="base">-0.05 -0.1095 0.108809 -1.5708 -0.00691612 0</pose>
+      <parent>base</parent>
+      <child>leg_top_other</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>6</velocity>
+          <lower>-3.141592653589793</lower>
+          <upper>3.141592653589793</upper>
+        </limit>
+        <dynamics>
+          <friction>0.5</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Link leg_top_motor -->
+    <link name="leg_top_motor">
+      <inertial>
+        <pose>-0.0624971 -0.000427276 -0.0118422 0 0 0</pose>
+        <mass>0.074</mass>
+        <inertia>
+          <ixx>1.33602e-05</ixx>
+          <ixy>7.9025e-08</ixy>
+          <ixz>-4.48072e-06</ixz>
+          <iyy>0.000148627</iyy>
+          <iyz>2.6649e-08</iyz>
+          <izz>0.000153468</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="joint_left_rear">0 0 0 0 -0 0</pose>
+      <!-- Part leg_top_motor -->
+      <visual name="leg_top_motor_visual_mesh_1">
+        <pose relative_to="leg_top_motor">-0.06 0 0 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_top_motor.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.498039 0.498039 0.498039 1</ambient>
+          <diffuse>0.498039 0.498039 0.498039 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="leg_top_motor_collision_mesh_2">
+        <pose relative_to="leg_top_motor">-0.06 0 0 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_top_motor.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Link linkage -->
+    <link name="linkage">
+      <inertial>
+        <pose>0.154139 -0.0541811 -0.00727959 0 0 0</pose>
+        <mass>0.468</mass>
+        <inertia>
+          <ixx>0.000374526</ixx>
+          <ixy>0.00026884</ixy>
+          <ixz>0.000131435</ixz>
+          <iyy>0.00103876</iyy>
+          <iyz>-4.64537e-05</iyz>
+          <izz>0.00116646</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="passive_left_rear">0 0 0 0 -0 0</pose>
+      <!-- Part bottom_leg_motor -->
+      <visual name="bottom_leg_motor_visual_mesh_1">
+        <pose relative_to="linkage">-0.00663577 -0.0188671 0.022 3.14159 -0 -0.338199</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/bottom_leg_motor.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.972549 0.529412 0.00392157 1</ambient>
+          <diffuse>0.972549 0.529412 0.00392157 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="bottom_leg_motor_collision_mesh_2">
+        <pose relative_to="linkage">-0.00663577 -0.0188671 0.022 3.14159 -0 -0.338199</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/bottom_leg_motor.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part knuppel -->
+      <visual name="knuppel_visual_mesh_1">
+        <pose relative_to="linkage">0.169804 -0.0597219 0.022 0 0 2.80339</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/knuppel.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.231373 0.380392 0.705882 1</ambient>
+          <diffuse>0.231373 0.380392 0.705882 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="knuppel_collision_mesh_2">
+        <pose relative_to="linkage">0.169804 -0.0597219 0.022 0 0 2.80339</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/knuppel.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part cybergear_5 -->
+      <visual name="cybergear_5_visual_mesh_1">
+        <pose relative_to="linkage">0.169804 -0.0597219 -0.007 -3.14159 0 1.2326</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.207843 0.207843 0.207843 1</ambient>
+          <diffuse>0.207843 0.207843 0.207843 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="cybergear_5_collision_mesh_2">
+        <pose relative_to="linkage">0.169804 -0.0597219 -0.007 -3.14159 0 1.2326</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Link wheel -->
+    <link name="wheel">
+      <inertial>
+        <pose>2.8866e-08 -0 -0.006 0 0 0</pose>
+        <mass>1.00219</mass>
+        <inertia>
+          <ixx>0.00287287</ixx>
+          <ixy>-0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00287286</iyy>
+          <iyz>0</iyz>
+          <izz>0.00546952</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="wheel_left">0 0 0 0 -0 0</pose>
+      <!-- Part tire_5_inch -->
+      <visual name="tire_5_inch_visual_mesh_1">
+        <pose relative_to="wheel">-0.167081 0.0445012 -0.00741544 -3.14159 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/tire_5_inch.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.980392 0.713725 0.00392157 1</ambient>
+          <diffuse>0.980392 0.713725 0.00392157 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tire_5_inch_collision_mesh_2">
+        <pose relative_to="wheel">-0.167081 0.0445012 -0.00741544 -3.14159 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/tire_5_inch.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part hub -->
+      <visual name="hub_visual_mesh_1">
+        <pose relative_to="wheel">-0 -0 -0.006 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/hub.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="hub_collision_mesh_2">
+        <pose relative_to="wheel">-0 -0 -0.006 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/hub.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part hub_2 -->
+      <visual name="hub_2_visual_mesh_1">
+        <pose relative_to="wheel">-0 -0 -0.006 0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/hub.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="hub_2_collision_mesh_2">
+        <pose relative_to="wheel">-0 -0 -0.006 0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/hub.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Joint from linkage to wheel -->
+    <joint name="wheel_left" type="revolute">
+      <pose relative_to="linkage">0.169804 -0.0597219 -0.035 -0 -0 -0.338199</pose>
+      <parent>linkage</parent>
+      <child>wheel</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>4</effort>
+          <velocity>30</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <friction>0.5</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Joint from leg_top_motor to linkage -->
+    <joint name="passive_left_rear" type="revolute">
+      <pose relative_to="leg_top_motor">-0.12 0 -0.045 -0 -0 0</pose>
+      <parent>leg_top_motor</parent>
+      <child>linkage</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>6</velocity>
+          <lower>-3.141592653589793</lower>
+          <upper>3.141592653589793</upper>
+        </limit>
+        <dynamics>
+          <friction>0.5</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Joint from base to leg_top_motor -->
+    <joint name="joint_left_rear" type="revolute">
+      <pose relative_to="base">0.05 -0.1095 0.108809 1.5708 -0.00130149 3.14159</pose>
+      <parent>base</parent>
+      <child>leg_top_motor</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>6</velocity>
+          <lower>-3.141592653589793</lower>
+          <upper>3.141592653589793</upper>
+        </limit>
+        <dynamics>
+          <friction>0.5</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Link leg_top_other_2 -->
+    <link name="leg_top_other_2">
+      <inertial>
+        <pose>-0.046887 -0.0016843 -0.0253058 0 0 0</pose>
+        <mass>0.095</mass>
+        <inertia>
+          <ixx>2.59647e-05</ixx>
+          <ixy>-1.43021e-06</ixy>
+          <ixz>-1.40489e-05</ixz>
+          <iyy>0.000166476</iyy>
+          <iyz>2.25046e-06</iyz>
+          <izz>0.000164641</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="joint_right_rear">0 0 0 0 -0 0</pose>
+      <!-- Part leg_top_other_2 -->
+      <visual name="leg_top_other_2_visual_mesh_1">
+        <pose relative_to="leg_top_other_2">-0.06 0 -0.044 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_top_other.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="leg_top_other_2_collision_mesh_2">
+        <pose relative_to="leg_top_other_2">-0.06 0 -0.044 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_top_other.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Link leg_bottom_other_2 -->
+    <link name="leg_bottom_other_2">
+      <inertial>
+        <pose>0.0839828 0 -0.0103274 0 0 0</pose>
+        <mass>0.085</mass>
+        <inertia>
+          <ixx>1.54332e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>4.80161e-06</ixz>
+          <iyy>0.000301804</iyy>
+          <iyz>0</iyz>
+          <izz>0.000308476</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="passive_right_rear">0 0 0 0 -0 0</pose>
+      <!-- Part leg_bottom_other_2 -->
+      <visual name="leg_bottom_other_2_visual_mesh_1">
+        <pose relative_to="leg_bottom_other_2">0.09 0 -0.022 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_bottom_other.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="leg_bottom_other_2_collision_mesh_2">
+        <pose relative_to="leg_bottom_other_2">0.09 0 -0.022 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_bottom_other.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Joint from leg_top_other_2 to leg_bottom_other_2 -->
+    <joint name="passive_right_rear" type="revolute">
+      <pose relative_to="leg_top_other_2">-0.12 -0 -0.022 -3.14159 -0 0.334797</pose>
+      <parent>leg_top_other_2</parent>
+      <child>leg_bottom_other_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>6</velocity>
+          <lower>-3.141592653589793</lower>
+          <upper>3.141592653589793</upper>
+        </limit>
+        <dynamics>
+          <friction>0.5</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Joint from base to leg_top_other_2 -->
+    <joint name="joint_right_rear" type="revolute">
+      <pose relative_to="base">0.05 0.1025 0.108809 -1.5708 0.00176296 3.14159</pose>
+      <parent>base</parent>
+      <child>leg_top_other_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>6</velocity>
+          <lower>-3.141592653589793</lower>
+          <upper>3.141592653589793</upper>
+        </limit>
+        <dynamics>
+          <friction>0.5</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Link leg_top_motor_2 -->
+    <link name="leg_top_motor_2">
+      <inertial>
+        <pose>-0.0624971 -0.000427276 -0.0118422 0 0 0</pose>
+        <mass>0.074</mass>
+        <inertia>
+          <ixx>1.33602e-05</ixx>
+          <ixy>7.9025e-08</ixy>
+          <ixz>-4.48072e-06</ixz>
+          <iyy>0.000148627</iyy>
+          <iyz>2.6649e-08</iyz>
+          <izz>0.000153468</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="joint_right_front">0 0 0 0 -0 0</pose>
+      <!-- Part leg_top_motor_2 -->
+      <visual name="leg_top_motor_2_visual_mesh_1">
+        <pose relative_to="leg_top_motor_2">-0.06 0 -0 -3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_top_motor.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.498039 0.498039 0.498039 1</ambient>
+          <diffuse>0.498039 0.498039 0.498039 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="leg_top_motor_2_collision_mesh_2">
+        <pose relative_to="leg_top_motor_2">-0.06 0 -0 -3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/leg_top_motor.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Link linkage_2 -->
+    <link name="linkage_2">
+      <inertial>
+        <pose>0.154248 -0.05387 -0.00727959 0 0 0</pose>
+        <mass>0.468</mass>
+        <inertia>
+          <ixx>0.000373444</ixx>
+          <ixy>0.000267498</ixy>
+          <ixz>0.000131529</ixz>
+          <iyy>0.00103984</iyy>
+          <iyz>-4.61885e-05</iyz>
+          <izz>0.00116646</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="passive_right_front">0 0 0 0 -0 0</pose>
+      <!-- Part bottom_leg_motor_2 -->
+      <visual name="bottom_leg_motor_2_visual_mesh_1">
+        <pose relative_to="linkage_2">-0.00659769 -0.0188804 0.022 -3.14159 -0 -0.336181</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/bottom_leg_motor.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.972549 0.529412 0.00392157 1</ambient>
+          <diffuse>0.972549 0.529412 0.00392157 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="bottom_leg_motor_2_collision_mesh_2">
+        <pose relative_to="linkage_2">-0.00659769 -0.0188804 0.022 -3.14159 -0 -0.336181</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/bottom_leg_motor.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part knuppel_2 -->
+      <visual name="knuppel_2_visual_mesh_1">
+        <pose relative_to="linkage_2">0.169924 -0.0593792 0.022 -0 -0 2.80541</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/knuppel.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.231373 0.380392 0.705882 1</ambient>
+          <diffuse>0.231373 0.380392 0.705882 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="knuppel_2_collision_mesh_2">
+        <pose relative_to="linkage_2">0.169924 -0.0593792 0.022 -0 -0 2.80541</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/knuppel.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part cybergear_6 -->
+      <visual name="cybergear_6_visual_mesh_1">
+        <pose relative_to="linkage_2">0.169924 -0.0593792 -0.007 3.14159 0 1.23461</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.207843 0.207843 0.207843 1</ambient>
+          <diffuse>0.207843 0.207843 0.207843 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="cybergear_6_collision_mesh_2">
+        <pose relative_to="linkage_2">0.169924 -0.0593792 -0.007 3.14159 0 1.23461</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/cybergear.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Link wheel_2 -->
+    <link name="wheel_2">
+      <inertial>
+        <pose>2.8866e-08 -0 -0.006 0 0 0</pose>
+        <mass>1.00219</mass>
+        <inertia>
+          <ixx>0.00287287</ixx>
+          <ixy>0</ixy>
+          <ixz>-0</ixz>
+          <iyy>0.00287286</iyy>
+          <iyz>-0</iyz>
+          <izz>0.00546952</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="wheel_right">0 0 0 0 -0 0</pose>
+      <!-- Part tire_5_inch_2 -->
+      <visual name="tire_5_inch_2_visual_mesh_1">
+        <pose relative_to="wheel_2">-0.167081 0.0445012 -0.00741544 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/tire_5_inch.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.980392 0.713725 0.00392157 1</ambient>
+          <diffuse>0.980392 0.713725 0.00392157 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tire_5_inch_2_collision_mesh_2">
+        <pose relative_to="wheel_2">-0.167081 0.0445012 -0.00741544 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/tire_5_inch.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part hub_3 -->
+      <visual name="hub_3_visual_mesh_1">
+        <pose relative_to="wheel_2">-0 -0 -0.006 -3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/hub.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="hub_3_collision_mesh_2">
+        <pose relative_to="wheel_2">-0 -0 -0.006 -3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/hub.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part hub_4 -->
+      <visual name="hub_4_visual_mesh_1">
+        <pose relative_to="wheel_2">-0 -0 -0.006 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/hub.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="hub_4_collision_mesh_2">
+        <pose relative_to="wheel_2">-0 -0 -0.006 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://cyberbot_description/sdf/assets/hub.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <!-- Joint from linkage_2 to wheel_2 -->
+    <joint name="wheel_right" type="revolute">
+      <pose relative_to="linkage_2">0.169924 -0.0593792 -0.035 0 -0 -0.336181</pose>
+      <parent>linkage_2</parent>
+      <child>wheel_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>4</effort>
+          <velocity>30</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <friction>0.5</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Joint from leg_top_motor_2 to linkage_2 -->
+    <joint name="passive_right_front" type="revolute">
+      <pose relative_to="leg_top_motor_2">-0.12 0 -0.045 0 -0 0</pose>
+      <parent>leg_top_motor_2</parent>
+      <child>linkage_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>6</velocity>
+          <lower>-3.141592653589793</lower>
+          <upper>3.141592653589793</upper>
+        </limit>
+        <dynamics>
+          <friction>0.5</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Joint from base to leg_top_motor_2 -->
+    <joint name="joint_right_front" type="revolute">
+      <pose relative_to="base">-0.05 0.1025 0.108809 1.5708 -0.00294486 -0</pose>
+      <parent>base</parent>
+      <child>leg_top_motor_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>6</velocity>
+          <lower>-3.141592653589793</lower>
+          <upper>3.141592653589793</upper>
+        </limit>
+        <dynamics>
+          <friction>0.5</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Additional cyberbot_control.xml -->
+    <ros2_control name="cyberbot" type="system">
+      <joint name="joint_left_front">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="joint_left_rear">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="joint_right_front">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="joint_right_rear">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <!-- Passive joints are physics, never additional actuators. -->
+      <joint name="passive_left_front">
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="passive_left_rear">
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="passive_right_front">
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="passive_right_rear">
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="wheel_left">
+        <command_interface name="effort">
+          <param name="min">-4</param>
+          <param name="max">4</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      <joint name="wheel_right">
+        <command_interface name="effort">
+          <param name="min">-4</param>
+          <param name="max">4</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+    </ros2_control>
+  </model>
+</sdf>
