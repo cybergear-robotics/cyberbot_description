@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-24.04
@@ -18,6 +21,7 @@ jobs:
       - name: Build and test description package
         uses: ros-tooling/action-ros-ci@0.4.8
         with:
+          import-token: ${{ github.token }}
           package-name: cyberbot_description
           target-ros2-distro: jazzy
           extra-cmake-args: >-
